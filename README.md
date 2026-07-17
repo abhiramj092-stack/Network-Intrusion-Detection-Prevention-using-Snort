@@ -37,7 +37,7 @@ alert icmp any any -> 8.8.8.8 any (msg:"Icmp ping detected"; sid:100001; rev:1;)
 
 This rule was added to `/etc/snort/rules/local.rules` using `nano`.
 
-![Rule Creation](01_rule_creation.png/01_rule_creation.png)
+![Rule Creation](01_rule_creation.png)
 
 ---
 
@@ -55,7 +55,7 @@ As ICMP packets matching the rule arrived, Snort generated real-time alerts:
 [**] [1:100001:1] Icmp ping detected [**] [Priority: 0] {ICMP} 192.168.190.142 -> 8.8.8.8
 ```
 
-![IDS Alert Detection](images/02_ids_alert_detection.png)
+![IDS Alert Detection](02_ids_alert_detection.png)
 
 ---
 
@@ -69,7 +69,7 @@ ping 8.8.8.8
 
 This confirmed that Snort successfully detected and logged each ping request matching the configured rule.
 
-![Traffic Generation](images/03_traffic_generation_ping.png)
+![Traffic Generation](03_traffic_generation_ping.png)
 
 ---
 
@@ -89,7 +89,7 @@ ERROR: Can't set DAQ BPF filter to '/etc/snort/snort.conf'
 Fatal Error, Quitting..
 ```
 
-![IPS Inline Mode Attempt](images/04_ips_inline_mode_attempt.png)
+![IPS Inline Mode Attempt](04_ips_inline_mode_attempt.png)
 
 **Fix:** ensure the config flag is correctly placed:
 
@@ -112,7 +112,7 @@ cat snort.alert
 
 Log files observed include `snort.alert`, `snort.alert.fast`, and binary packet capture logs (`snort.log.<timestamp>`).
 
-![Log Files Listing](images/05_log_files_listing.png)
+![Log Files Listing](05_log_files_listing.png)
 
 ---
 
@@ -124,7 +124,7 @@ To inspect the binary `snort.log` packet capture files at a deeper level, Wiresh
 sudo apt install wireshark
 ```
 
-![Wireshark Installation](images/06_wireshark_install.png)
+![Wireshark Installation](06_wireshark_install.png)
 
 ---
 
@@ -132,7 +132,7 @@ sudo apt install wireshark
 
 The Snort-generated packet capture file (`snort.log.1784295386`) was opened in Wireshark for deeper protocol-level inspection, confirming captured TCP/ICMP traffic and validating that Snort correctly logged network activity.
 
-![Wireshark Packet Analysis](images/07_wireshark_packet_analysis.png)
+![Wireshark Packet Analysis](07_wireshark_packet_analysis.png)
 
 ---
 
