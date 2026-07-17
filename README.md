@@ -124,7 +124,7 @@ To inspect the binary `snort.log` packet capture files at a deeper level, Wiresh
 sudo apt install wireshark
 ```
 
-![Wireshark Installation](06_wireshark_install.png)
+![Wireshark Installation](07_wireshark_packet_analysis.png)
 
 ---
 
@@ -132,7 +132,7 @@ sudo apt install wireshark
 
 The Snort-generated packet capture file (`snort.log.1784295386`) was opened in Wireshark for deeper protocol-level inspection, confirming captured TCP/ICMP traffic and validating that Snort correctly logged network activity.
 
-![Wireshark Packet Analysis](07_wireshark_packet_analysis.png)
+![Wireshark Packet Analysis](06_wireshark_install.png)
 
 ---
 
