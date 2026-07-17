@@ -37,7 +37,7 @@ alert icmp any any -> 8.8.8.8 any (msg:"Icmp ping detected"; sid:100001; rev:1;)
 
 This rule was added to `/etc/snort/rules/local.rules` using `nano`.
 
-![Rule Creation](images/01_rule_creation.png)
+![Rule Creation](01_rule_creation.png/01_rule_creation.png)
 
 ---
 
